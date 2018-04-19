@@ -1,5 +1,9 @@
 //variables
 
+var map;
+var mouseIsClicked = false;
+var imageIsON = false;
+
 function preload() {
 
   backgroundImage = loadImage('images/dummybackground.jpg');
@@ -14,16 +18,32 @@ function preload() {
   img16 = loadImage('images/americaspieces-16.jpg');
   img19 = loadImage('images/americaspieces-19.jpg');
   img22 = loadImage('images/americaspieces-22.jpg');
-  
+
 }
 
 function setup() {
 
-  background(backgroundImage);
+  //create Canvas
+  createCanvas(backgroundImage.width,backgroundImage.height);
+
+  background(backgroundImage,0,0,backgroundImage.width,backgroundImage.height);
+
+  mapObject = new MapObject(backgroundImage,backgroundImage.width,backgroundImage.height);
+  mapObject.setupImageObjects();
 
 }
 
 function draw() {
 
+  mapObject.display();
+
+  console.log(imageIsON);
+
+}
+
+function mouseClicked() {
+
+  if (mouseIsClicked) { mouseIsClicked = false; }
+  else { mouseIsClicked = true; }
 
 }

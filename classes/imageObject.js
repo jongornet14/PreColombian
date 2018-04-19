@@ -11,9 +11,9 @@ class ImageObject {
     this.sizeY = sizeY;
 
     this.objectCode = objectCode;
-    
-    this.show = false;
 
+    this.show = true;
+    this.activate = false;
   }
 
   changeShow() {
@@ -29,15 +29,26 @@ class ImageObject {
 
       imageMode(CENTER);
 
-      if(dist(this.xPos,mouseX,this.yPos,mouseY) < 30) {
+      if(dist(this.xPos,this.yPos,mouseX,mouseY) < 50) {
+        imageIsON = true;
+        this.activate = true;
+        background(255);
         image(this.image,this.xPos,this.yPos,this.sizeX * 1.5,this.sizeY * 1.5);
+
+        textSize(30);
+        fill(0);
+        textAlign(CENTER);
+        text('Something pretty cool about the art', this.xPos, this.yPos + 200);
+
+      }
+      else if(dist(this.xPos,this.yPos,mouseX,mouseY) > 50 && this.activate) {
+        imageIsON = false
+        this.activate = false;
+
       }
       else {
-        image(this.image,this.xPos,this.yPos,this.sizeX,this.sizeY);
+        if(imageIsON == false) { image(this.image,this.xPos,this.yPos,this.sizeX,this.sizeY); }
       }
-
     }
-
   }
-
 }
