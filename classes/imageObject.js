@@ -32,7 +32,7 @@ class ImageObject {
       if(dist(this.xPos,this.yPos,mouseX,mouseY) < 50) {
         imageIsON = true;
         this.activate = true;
-        background(255);
+        background(255,255,255,200);
         image(this.image,this.xPos,this.yPos,this.sizeX * 1.5,this.sizeY * 1.5);
 
         textSize(30);
