@@ -1,7 +1,10 @@
+// mapObject.js
+
 class MapObject {
 
-  constructor(img,sizeX,sizeY) {
+  constructor(scaling, img,sizeX,sizeY) {
 
+    this.scaling = scaling;
     this.xPos = 0;
     this.yPos = 0;
 
@@ -15,7 +18,10 @@ class MapObject {
 
   setupImageObjects() {
 
-    this.imageObjectArray[0] = new ImageObject(img2,348,720,img2.width/1.1,img2.height/1.1,2,"Peru",
+    var xOffset = (img2.width/2)/4;
+    var yOffset = (img2.height/2)/4;
+
+    /*this.imageObjectArray[0] = new ImageObject(img2,348,720,img2.width/1.1,img2.height/1.1,2,"Peru",
       "This artifact was found in Moche, Peru. Settlers were those who lived  Pre-Columbian in America before the arrival of the Spaniards. Many of those communities were small cultural groups, but some were great empires, among them the Muiscas, the Moche, and the - Incas. The first inhabitants were mathematical experts, with extensive knowledge of astronomy and science.",
       "Precolombinos eran los que Los pobladores habitaban en América antes de la llegada de los españoles. Muchos de aquellos pueblos - eran pequeños grupos culturales, pero algu nos eran grandes imperios, como los muiscas, los moche, y los incas, entre otros. Los primeros habitantes eran expertos matemáticos y tenían amplios conocimientos de astronomía y ciencia.", -100, 100);
     this.imageObjectArray[1] = new ImageObject(img6,337,999,img6.width,img6.height,6,"Chile",
@@ -33,20 +39,27 @@ class MapObject {
     this.imageObjectArray[5] = new ImageObject(img19,380,105,img19.width/1.5,img19.height/1.5,19,"Colombia","(Tairona, Colombia). South American indigenous peoples often have their bodies profusely decorated and tattooed. In some societies they paint their faces and bodies, and wear crowns, nose rings, earmuffs, pectorals and other metal ornaments. The decoration is a second skin through which the personality is defined and transformed.",
  "Los indígenas suramericanos llevan con frecuencia sus cuerpos profusamente decorados y tatuados. En algunas sociedades pintan sus caras y cuerpos, y usan coronas, narigueras, orejeras, pectorales y otros adornos de metal. La decoración es una seguda piel a través de la cual se define y transforma la personalidad." , -100, 100);
 
-    this.imageObjectArray[6] = new ImageObject(img3,350,220,img2.width/1.5,img2.height/1.5,2,"Colombia","(Quimbaya, Colombia.) The masks that you will find in this room are conceived as elements that help transform the personality and assume a new temporality and reality. They are tools that interrupt everyday existence and penetrate the sacred world of the ancestors and the gods.", "las mascaras que encontraras en esta sala, son concebidos como elementos que ayudan transformar la personalidad y a asumir una nueva temporalidad y realidad. Es una herra mienta que interrumpe la existencia cotidiana y penetra en el mundo sagrado de los ante pasados y los dioses.", -100,100);
+    this.imageObjectArray[6] = new ImageObject(img3,350,220,img2.width/1.5,img2.height/1.5,2,"Colombia","(Quimbaya, Colombia.) The masks that you will find in this room are conceived as elements that help transform the personality and assume a new temporality and reality. They are tools that interrupt everyday existence and penetrate the sacred world of the ancestors and the gods.", "las mascaras que encontraras en esta sala, son concebidos como elementos que ayudan transformar la personalidad y a asumir una nueva temporalidad y realidad. Es una herra mienta que interrumpe la existencia cotidiana y penetra en el mundo sagrado de los ante pasados y los dioses.", -100,100);*/
+
+    this.imageObjectArray[0] = new ImageObject(img15,377,350,img15.width*0.3,img15.height*0.3,15,"Argentina","(Condorhuasi, Argentina). This artifact was created by a technique known as trimming.","Este artefacto fue creado por una tecnica conocida como recorte.",
+ -100, 100);
+
+ this.imageObjectArray[1] = new ImageObject(img9,328,248,img9.width*0.3,img9.height*0.3,9,"Peru",
+   "(Lambayeque, Peru). The artworks of different pre-Columbian cultures are characterized by great wealth and diversity. The pre-Columbian art is highlighted by the artwork in gold and ceramics of the indigenous cultures, which were considered the best in the continent.",
+   "Las obras de las diferentes culturas precolombinas se caracterizan por una gran riqueza y diversidad. El arte precolombino es destacado por los trabajos en oro y cerámica de las culturas indígenas las cuales fueron consideradas las mejores del continente ", -100, 100);
 
   }
 
   display() {
 
-    imageMode(CORNER);
-
-    background(this.image,this.xPos,this.yPos,this.sizeX,this.sizeY);
-
     imageMode(CENTER);
+//    background(this.image, width/2, height/2, this.sizeX, this.sizeY);
+    image(this.image, width/2, height/2, this.sizeX * this.scaling, this.sizeY * this.scaling);
 
-    for(var i = 0; i < this.imageObjectArray.length; i++) {
-      this.imageObjectArray[i].display();
-    }
+    //for(var i = 0; i < this.imageObjectArray.length; i++) {
+    //  this.imageObjectArray[i].display();
+    //}
+    this.imageObjectArray[0].display();
+    this.imageObjectArray[1].display();
   }
 }

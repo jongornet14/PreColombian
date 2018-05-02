@@ -45,21 +45,21 @@ class ImageObject {
         textSize(30);
         fill(0);
         textAlign(CENTER);
-        text(this.name, this.xPos, this.yPos + 200);
+        text(this.name, this.xPos, this.yPos + 70);
 
           if (mouseIsClicked){
             // fill(100,100,100);
             fill(161, 105, 199);
-            rect(this.xPos,this.yPos,800,300);
+            rect(this.xPos,this.yPos,300,100);
             fill(1, 8, 2);
-            textSize(17);
+            textSize(12);
             var e=this.description;
             var s=this.spanish;
             text(e,this.xPos+20,this.yPos+20,250,300);
-            image(this.image,this.xPos+350,this.yPos+150,150,250);
+            //image(this.image,this.xPos+350,this.yPos+150,150,250);
             // text(s, this.xPos+453, this.yPos+20, 250, 300);
-            text(s,this.xPos+435,this.yPos+20,250,300);
-
+            //text(s,this.xPos+435,this.yPos+20,250,300);
+            text(s,this.xPos+20,this.yPos+60,250,300);
           }
 
 
@@ -77,4 +77,3 @@ class ImageObject {
     }
   }
 }
-
