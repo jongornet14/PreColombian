@@ -1,6 +1,6 @@
-//variables
 
-var map;
+
+var back;
 var mouseIsClicked = false;
 var imageIsON = false;
 
@@ -8,16 +8,18 @@ function preload() {
 
   backgroundImage = loadImage('images/dummybackground.jpg');
 
-  img1 = loadImage('images/americaspieces-01.jpg');
-  img2 = loadImage('images/americaspieces-02.jpg');
-  img6 = loadImage('images/americaspieces-06.jpg');
-  img9 = loadImage('images/americaspieces-09.jpg');
-  img11 = loadImage('images/americaspieces-11.jpg');
-  img12 = loadImage('images/americaspieces-12.jpg');
-  img15 = loadImage('images/americaspieces-15.jpg');
-  img16 = loadImage('images/americaspieces-16.jpg');
-  img19 = loadImage('images/americaspieces-19.jpg');
-  img22 = loadImage('images/americaspieces-22.jpg');
+  img1 = loadImage('images2/peru1.png');
+  img2 = loadImage('images2/Peru.png');
+  img3 = loadImage('images2/Colombia Q.png');
+  img6 = loadImage('images2/Inca.png');
+  img9 = loadImage('images2/Lam.png');
+  img11 = loadImage('images2/I,Bolivia.png');
+  img12 = loadImage('images2/Bolivia.png');
+  img15 = loadImage('images2/Argentina.png');
+  img16 = loadImage('images2/costa rica.png');
+  img19 = loadImage('images2/Colombia.png');
+  img22 = loadImage('images2/Colombia Q.png');
+  back  = loadImage("h.jpg");
 
 }
 
