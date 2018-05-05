@@ -57,7 +57,7 @@ class ImageObject {
             var s=this.spanish;
             text(e,this.xPos+20,this.yPos+20,250,300);
             //image(this.image,this.xPos+350,this.yPos+150,150,250);
-            // text(s, this.xPos+453, this.yPos+20, 250, 300);
+            //text(s, this.xPos+453, this.yPos+20, 250, 300);
             //text(s,this.xPos+435,this.yPos+20,250,300);
             text(s,this.xPos+20,this.yPos+60,250,300);
           }

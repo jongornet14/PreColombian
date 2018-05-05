@@ -11,6 +11,9 @@ var imageIsON = false;
 
 // detects if camera is on or off (switch between tabs)
 var scanning = false;
+
+var markerHiro;
+
 function preload() {
 
   backgroundImage = loadImage('images/map.png');
@@ -34,12 +37,16 @@ function setup() {
 
   mapObject = new MapObject(0.5, backgroundImage, backgroundImage.width, backgroundImage.height);
   mapObject.setupImageObjects();
+
+  markerHiro = world.getMarker('hiro');
+  markerPika = world.getMarker('pika');
+
 }
 
 function draw() {
 
-  console.log("X: " + mouseX);
-  console.log("Y: " + mouseY);
+  //console.log("X: " + mouseX);
+  //console.log("Y: " + mouseY);
 
   world.clearDrawingCanvas();
 
@@ -53,6 +60,13 @@ function draw() {
   else {
 
     // scan code goes here
+    if (markerHiro.isVisible() == true) {
+      fill(255);
+      textSize(50);
+      textAlign(CENTER);
+      text("Hiro is visible", width/2, height/2);
+      console.log("Hiro is visible");
+    }
 
   }
 
