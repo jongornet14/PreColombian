@@ -39,7 +39,9 @@ function setup() {
   mapObject.setupImageObjects();
 
   markerHiro = world.getMarker('hiro');
+  markerKanji = world.getMarker('kanji');
   markerPika = world.getMarker('pika');
+  markerZb = world.getMarker('zb');
 
 }
 
@@ -65,7 +67,28 @@ function draw() {
       textSize(50);
       textAlign(CENTER);
       text("Hiro is visible", width/2, height/2);
-      console.log("Hiro is visible");
+      mapObject.imageObjectArray[0].reveal()
+    }
+    if (markerKanji.isVisible() == true) {
+      fill(255);
+      textSize(50);
+      textAlign(CENTER);
+      text("Kanji is visible", width/2, height/2);
+      mapObject.imageObjectArray[1].reveal()
+    }
+    if (markerPika.isVisible() == true) {
+      fill(255);
+      textSize(50);
+      textAlign(CENTER);
+      text("Pika is visible", width/2, height/2);
+      mapObject.imageObjectArray[2].reveal()
+    }
+    if (markerZb.isVisible() == true) {
+      fill(255);
+      textSize(50);
+      textAlign(CENTER);
+      text("Zb is visible", width/2, height/2);
+      mapObject.imageObjectArray[3].reveal()
     }
 
   }

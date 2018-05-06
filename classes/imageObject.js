@@ -16,18 +16,17 @@ class ImageObject {
 
     this.objectCode = objectCode;
 
-    this.show = true;
+    this.show = false;
     this.activate = false;
     this.name=name;
     this.description=description;
     this.spanish=sd;
   }
 
-  changeShow() {
+  reveal() {
 
-    if(this.show) { this.show = false; }
-    else { this.show = true; }
-
+    this.show = true;
+    
   }
 
   display() {
