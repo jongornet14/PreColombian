@@ -47,8 +47,10 @@ function setup() {
 
 function draw() {
 
-  console.log("X: " + mouseX);
-  console.log("Y: " + mouseY);
+  //console.log("X: " + mouseX);
+  //console.log("Y: " + mouseY);
+
+  console.log(scanning);
 
   world.clearDrawingCanvas();
 
@@ -76,21 +78,20 @@ function draw() {
       text("Kanji is visible", width/2, height/2);
       mapObject.imageObjectArray[1].reveal()
     }
-    if (markerPika.isVisible() == true) {
+    /*if (markerPika.isVisible() == true) {
       fill(255);
       textSize(50);
       textAlign(CENTER);
       text("Pika is visible", width/2, height/2);
       mapObject.imageObjectArray[2].reveal()
-    }
+    }*/
     if (markerZb.isVisible() == true) {
       fill(255);
       textSize(50);
       textAlign(CENTER);
       text("Zb is visible", width/2, height/2);
-      mapObject.imageObjectArray[3].reveal()
+      mapObject.imageObjectArray[2].reveal();
     }
-
   }
 
 }

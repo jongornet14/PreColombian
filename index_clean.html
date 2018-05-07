@@ -4,8 +4,6 @@
 		<!-- A-Frame VR Library -->
 		<script src="libraries/aframe.min.js"></script>
 
-		<!-- ARToolKit for A-Frame VR Library -->
-		<script src='libraries/aframe-ar.js'></script>
 
 		<!-- P5 libraries -->
 		<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
@@ -14,11 +12,14 @@
 		<!-- Craig's AFrameP5 AR library -->
 		<script language="javascript" type="text/javascript" src="libraries/aframep5_ar.js"></script>
 
-		<script src="classes/mapObject.js"></script>
-		<script src="classes/imageObject.js"></script>
+		<!-- ARToolKit for A-Frame VR Library -->
+		<script src='libraries/aframe-ar.js'></script>
 
 		<!-- P5 Sketch -->
 		<script language="javascript" type="text/javascript" src="classes/sketch_clean.js"></script>
+
+		<script src="classes/mapObject.js"></script>
+		<script src="classes/imageObject.js"></script>
 
 		<!-- Custom Styles -->
 		<style type="text/css">
@@ -76,8 +77,6 @@
 				}
 			}
 
-
-
 		</style>
 
 	</head>
@@ -89,6 +88,11 @@
 			<h1>Rotate your device into landscape mode!</h1>
 		</div>
 
+		<div id="buttons">
+			<button id="map" onclick="showMap();">Map</button>
+			<button id="scan" onclick="showScan();">Scan</button>
+		</div>
+		
 		<!-- Define A-Frame VR Scene and set it up so that it will be manipulated through AR.js -->
 		<a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono;'>
 
@@ -105,10 +109,7 @@
 			<a-entity camera></a-entity>
 		</a-scene>
 
-		<div id="buttons">
-			<button id="map" onclick="showMap();">Map</button>
-			<button id="scan" onclick="showScan();">Scan</button>
-		</div>
+
 
 
 	</body>
