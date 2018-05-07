@@ -41,13 +41,17 @@ class MapObject {
 
     this.imageObjectArray[6] = new ImageObject(img3,350,220,img2.width/1.5,img2.height/1.5,2,"Colombia","(Quimbaya, Colombia.) The masks that you will find in this room are conceived as elements that help transform the personality and assume a new temporality and reality. They are tools that interrupt everyday existence and penetrate the sacred world of the ancestors and the gods.", "las mascaras que encontraras en esta sala, son concebidos como elementos que ayudan transformar la personalidad y a asumir una nueva temporalidad y realidad. Es una herra mienta que interrumpe la existencia cotidiana y penetra en el mundo sagrado de los ante pasados y los dioses.", -100,100);*/
 
-    this.imageObjectArray[0] = new ImageObject(img15,377,350,img15.width*0.3,img15.height*0.3,15,"Argentina","(Condorhuasi, Argentina). This artifact was created by a technique known as trimming.","Este artefacto fue creado por una tecnica conocida como recorte.",
+    this.imageObjectArray[0] = new ImageObject(img15,377,350,img15.width*0.1,img15.height*0.1,15,"Argentina","(Condorhuasi, Argentina). This artifact was created by a technique known as trimming.","Este artefacto fue creado por una tecnica conocida como recorte.",
  -100, 100);
 
- this.imageObjectArray[1] = new ImageObject(img9,328,248,img9.width*0.3,img9.height*0.3,9,"Peru",
-   "(Lambayeque, Peru). The artworks of different pre-Columbian cultures are characterized by great wealth and diversity. The pre-Columbian art is highlighted by the artwork in gold and ceramics of the indigenous cultures, which were considered the best in the continent.",
-   "Las obras de las diferentes culturas precolombinas se caracterizan por una gran riqueza y diversidad. El arte precolombino es destacado por los trabajos en oro y cerámica de las culturas indígenas las cuales fueron consideradas las mejores del continente ", -100, 100);
-
+    this.imageObjectArray[1] = new ImageObject(img9,328,248,img9.width*0.1,img9.height*0.1,9,"Peru",
+     "(Lambayeque, Peru). The artworks of different pre-Columbian cultures are characterized by great wealth and diversity. The pre-Columbian art is highlighted by the artwork in gold and ceramics of the indigenous cultures, which were considered the best in the continent.",
+     "Las obras de las diferentes culturas precolombinas se caracterizan por una gran riqueza y diversidad. El arte precolombino es destacado por los trabajos en oro y cerámica de las culturas indígenas las cuales fueron consideradas las mejores del continente ", -100, 100);
+    this.imageObjectArray[2] = new ImageObject(img6,358,305,img6.width*0.1,img6.height*0.1,6,"Chile",
+     "(Inca, Chile). Civilizations in South America invented very advanced cultural elements such as: calendars, anti-seismic construction systems, irrigation systems, writing systems, their own political and social systems, and an advanced technique in metallurgy, pottery and textile production.",
+     "Las civilizaciones  suramericanas descubrieron e inventaron e lementos culturales muy avanzados como el calendario, sistemas - de construcción antisísmi cos, así como un dominio en el trabajo de la piedra, sistemas de riego, sistemas de escritura, sus propios sistemas políticos y sociales, una avanzada metalurgia, alfarería y producción textil.", -100, 100);
+    this.imageObjectArray[3] = new ImageObject(img3,343,193,img2.width*0.1,img2.height*0.1,2,"Colombia","(Quimbaya, Colombia.) The masks that you will find in this room are conceived as elements that help transform the personality and assume a new temporality and reality. They are tools that interrupt everyday existence and penetrate the sacred world of the ancestors and the gods.", "las mascaras que encontraras en esta sala, son concebidos como elementos que ayudan transformar la personalidad y a asumir una nueva temporalidad y realidad. Es una herra mienta que interrumpe la existencia cotidiana y penetra en el mundo sagrado de los ante pasados y los dioses.", -100,100);
+    
   }
 
   display() {
@@ -56,10 +60,9 @@ class MapObject {
 //    background(this.image, width/2, height/2, this.sizeX, this.sizeY);
     image(this.image, width/2, height/2, this.sizeX * this.scaling, this.sizeY * this.scaling);
 
-    //for(var i = 0; i < this.imageObjectArray.length; i++) {
-    //  this.imageObjectArray[i].display();
-    //}
-    this.imageObjectArray[0].display();
-    this.imageObjectArray[1].display();
+    for(var i = 0; i < this.imageObjectArray.length; i++) {
+      this.imageObjectArray[i].display();
+    }
+
   }
 }

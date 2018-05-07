@@ -47,8 +47,8 @@ function setup() {
 
 function draw() {
 
-  //console.log("X: " + mouseX);
-  //console.log("Y: " + mouseY);
+  console.log("X: " + mouseX);
+  console.log("Y: " + mouseY);
 
   world.clearDrawingCanvas();
 
