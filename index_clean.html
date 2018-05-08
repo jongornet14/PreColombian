@@ -4,7 +4,6 @@
 		<!-- A-Frame VR Library -->
 		<script src="libraries/aframe.min.js"></script>
 
-
 		<!-- P5 libraries -->
 		<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
 		<script language="javascript" type="text/javascript" src="libraries/p5.dom.min.js"></script>
@@ -92,7 +91,7 @@
 			<button id="map" onclick="showMap();">Map</button>
 			<button id="scan" onclick="showScan();">Scan</button>
 		</div>
-		
+
 		<!-- Define A-Frame VR Scene and set it up so that it will be manipulated through AR.js -->
 		<a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono;'>
 
@@ -101,10 +100,10 @@
 			</a-assets>
 
 			<!-- set up all of the AR markers we will be working with along with links to their 'pattern' files -->
-			<a-marker id="hiro" preset="custom" url="../markers/patt.hiro"></a-marker>
-			<a-marker id="kanji" preset="custom" url="../markers/patt.kanji"></a-marker>
-			<a-marker id="hiro" preset="custom" url="../markers/patt.pika"></a-marker>
-			<a-marker id="zb" preset="custom" url="../markers/patt.zb"></a-marker>
+			<a-marker id="hiro" preset="custom" url="markers/patt.hiro"></a-marker>
+			<a-marker id="kanji" preset="custom" url="markers/patt.kanji"></a-marker>
+			<a-marker id="hiro" preset="custom" url="markers/patt.pika"></a-marker>
+			<a-marker id="zb" preset="custom" url="markers/patt.zb"></a-marker>
 
 			<a-entity camera></a-entity>
 		</a-scene>

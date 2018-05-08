@@ -90,7 +90,7 @@ function draw() {
       textSize(50);
       textAlign(CENTER);
       text("Zb is visible", width/2, height/2);
-      mapObject.imageObjectArray[2].reveal();
+      mapObject.imageObjectArray[3].reveal();
     }
   }
 
